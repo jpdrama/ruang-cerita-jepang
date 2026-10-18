@@ -3,173 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruang Cerita Jepang - Review Drama & Film Jepang Berkualitas</title>
+    <title>Ruang Cerita Jepang - Home</title>
     
     <style>
+        /* Reset & Base Style */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; 
-            background-color: #faf8f5; /* Krem lembut ala kertas washi */
-            color: #3d3d3d; 
-            line-height: 1.7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #fdfbf7; /* Warna kertas washi/krem lembut */
+            color: #4a4a4a; 
+            line-height: 1.8;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
         }
         
         .container { 
-            max-width: 680px; 
-            margin: 0 auto; 
-            padding: 20px; 
+            max-width: 600px; 
+            width: 100%;
+            padding: 40px 20px; 
+            text-align: center;
         }
         
-        /* HEADER */
-        .header { 
-            text-align: center; 
-            padding: 40px 20px 30px; 
-            border-bottom: 2px solid #e8d5c4;
-            margin-bottom: 35px;
+        /* Logo / Icon Area */
+        .logo-area {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
         }
-        .header-icon { font-size: 48px; margin-bottom: 10px; }
-        .header h1 { 
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Typography */
+        h1 { 
             color: #8b5e3c; /* Coklat kayu hangat */
-            font-size: 26px; 
-            letter-spacing: 2px;
-            margin-bottom: 8px;
+            font-size: 28px; 
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
-        .header p { 
-            font-style: italic; 
-            color: #999; 
+        
+        .subtitle {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        /* Content Box */
+        .content-box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(139, 94, 60, 0.08);
+            text-align: left;
+            border-top: 4px solid #d4a574;
+        }
+
+        .welcome-text {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        /* Feature List */
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .features li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 15px;
+        }
+        
+        .features li::before {
+            content: '🌸';
+            position: absolute;
+            left: 0;
+            top: 2px;
             font-size: 14px;
         }
-        
-        /* KATEGORI */
-        .category-title {
+
+        .highlight {
+            font-weight: 600;
             color: #8b5e3c;
-            font-size: 18px;
-            margin: 30px 0 15px;
-            padding-left: 12px;
-            border-left: 4px solid #d4a574;
         }
-        
-        /* LIST REVIEW */
-        .review-list { list-style: none; }
-        
-        .review-item { 
-            background: white; 
-            margin-bottom: 14px; 
-            padding: 18px 20px; 
-            border-radius: 10px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            transition: all 0.2s ease;
-            border-left: 4px solid #c9a87c;
+
+        /* Footer / Commitment */
+        .commitment {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #e8d5c4;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
         }
-        .review-item:hover { 
-            transform: translateX(6px); 
-            background: #fff9f4;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+        .footer-note {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #aaa;
         }
-        .review-item a { 
-            text-decoration: none; 
-            color: #2d2d2d; 
-            font-weight: 600; 
-            font-size: 16px;
-            display: block;
-        }
-        .review-item .tag {
-            display: inline-block;
-            background: #f0e6dc;
-            color: #8b5e3c;
-            font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 20px;
-            margin-top: 6px;
-            font-weight: 500;
-        }
-        .review-item .desc { 
-            font-size: 13px; 
-            color: #888; 
-            margin-top: 5px;
-        }
-        
-        /* FOOTER */
-        footer { 
-            text-align: center; 
-            margin-top: 50px; 
-            padding: 25px 20px;
-            border-top: 1px solid #e8d5c4;
-            font-size: 12px; 
-            color: #aaa; 
-        }
-        footer .heart { color: #e74c3c; }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <!-- HEADER -->
-    <div class="header">
-        <div class="header-icon">📖⛰️</div>
+    <div class="container">
+        
+        <!-- Icon Estetik (Bisa diganti gambar logo nanti) -->
+        <div class="logo-area">⛰️</div>
+        
         <h1>RUANG CERITA JEPANG</h1>
-        <p>Bedah cerita, review mendalam & rekomendasi tontonan bermakna</p>
+        <p class="subtitle">Bedah cerita, review mendalam & rekomendasi tontonan bermakna</p>
+
+        <div class="content-box">
+            <p class="welcome-text">
+                Selamat datang di Ruang Cerita Jepang! 🌸<br>
+                Ini adalah ruang khusus buat kamu para pecinta drama & film Jepang yang mencari tontonan bermakna. Di sini kita nggak cuma nonton, tapi juga meresapi setiap kisahnya! 💫
+            </p>
+
+            <ul class="features">
+                <li>
+                    <span class="highlight">Review Drama Inspiratif:</span><br>
+                    Bedah cerita film keluarga, romantis, & slice of life yang menyentuh hati.
+                </li>
+                <li>
+                    <span class="highlight">Sinopsis & Rekomendasi:</span><br>
+                    Update judul-judul hidden gem yang wajib tonton weekend ini.
+                </li>
+                <li>
+                    <span class="highlight">Vibe Santai & Hangat:</span><br>
+                    Diskusi seru bareng sesama penggemar tanpa drama toxic.
+                </li>
+                <li>
+                    <span class="highlight">Tips Lifestyle Minimalis:</span><br>
+                    Inspirasi gaya hidup & fashion ala Jepang yang estetik.
+                </li>
+            </ul>
+
+            <div class="commitment">
+                Kami berkomitmen menyajikan konten yang aman, nyaman, dan berkualitas untuk semua usia. ❤️<br>
+                Yuk, aktifkan notifikasi 🔔 dan jadikan channel ini teman setiamu setiap hari!
+            </div>
+        </div>
+
+        <div class="footer-note">
+            Konten bertujuan edukasi & hiburan sehat.<br>
+            Dukung karya asli melalui platform resmi. ✅<br>
+            © 2026 Ruang Cerita Jepang
+        </div>
+
     </div>
-
-    <!-- KATEGORI: DRAMA INSPIRATIF -->
-    <h2 class="category-title">🎬 Drama Inspiratif</h2>
-    <ul class="review-list">
-        <li class="review-item">
-            <a href="drama-mother.html">Mother (2010) - Ketika Seorang Guru Menjadi Ibu</a>
-            <span class="tag">Drama Keluarga</span>
-            <div class="desc">Review mendalam tentang pengorbanan seorang guru yang menyelamatkan muridnya dari kekerasan domestik.</div>
-        </li>
-        <li class="review-item">
-            <a href="drama-unnatural.html">Unnatural (2018) - Kebenaran di Balik Kematian</a>
-            <span class="tag">Mystery & Slice of Life</span>
-            <div class="desc">Bedah cerita drama forensik yang mengungkap kisah haru di balik setiap kasus kematian misterius.</div>
-        </li>
-        <li class="review-item">
-            <a href="drama-quartet.html">Quartet (2017) - Musik, Persahabatan & Rahasia</a>
-            <span class="tag">Drama Dewasa</span>
-            <div class="desc">Empat musisi bertemu kembali setelah 15 tahun. Review tentang mimpi yang tertunda dan ikatan persahabatan.</div>
-        </li>
-    </ul>
-
-    <!-- KATEGORI: FILM ROMANTIS -->
-    <h2 class="category-title">💕 Film Romantis</h2>
-    <ul class="review-list">
-        <li class="review-item">
-            <a href="film-your-name.html">Your Name (Kimi no Na wa) - Cinta Melampaui Waktu</a>
-            <span class="tag">Anime Film</span>
-            <div class="desc">Analisis visual dan filosofi tentang takdir, ingatan, dan koneksi antar jiwa yang tak terlihat.</div>
-        </li>
-        <li class="review-item">
-            <a href="film-love-letter.html">Love Letter (1995) - Surat Cinta dari Masa Lalu</a>
-            <span class="tag">Film Klasik</span>
-            <div class="desc">Review film masterpiece Shunji Iwai tentang cinta pertama, kehilangan, dan kenangan yang tak pernah pudar.</div>
-        </li>
-    </ul>
-
-    <!-- KATEGORI: SLICE OF LIFE -->
-    <h2 class="category-title">🍵 Slice of Life & Hidden Gem</h2>
-    <ul class="review-list">
-        <li class="review-item">
-            <a href="drama-shinya-shokudo.html">Midnight Diner (Shinya Shokudo) - Cerita di Balik Mangkuk Mie</a>
-            <span class="tag">Slice of Life</span>
-            <div class="desc">Setiap episode adalah kisah hidup pelanggan warung makan tengah malam. Review tentang manusia biasa dengan cerita luar biasa.</div>
-        </li>
-        <li class="review-item">
-            <a href="drama-nigeru-haji.html">Nigeru wa Haji da ga Yaku ni Tatsu - Nikah Kontrak yang Menghangatkan Hati</a>
-            <span class="tag">Rom-Com Dewasa</span>
-            <div class="desc">Bedah cerita komedi romantis tentang pernikahan kontrak yang mengajarkan arti rumah tangga sesungguhnya.</div>
-        </li>
-    </ul>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Ruang Cerita Jepang <span class="heart">♥</span></p>
-        <p style="margin-top:8px;">Konten bertujuan edukasi & hiburan sehat.<br>Dukung karya asli melalui platform resmi ✅</p>
-    </footer>
-
-</div>
 
 </body>
 </html>
